@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podinfo
-  namespace: barfly
+  namespace: itops
   labels:
     app: podinfo
   annotations:

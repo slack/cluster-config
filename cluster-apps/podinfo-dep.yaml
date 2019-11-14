@@ -11,6 +11,7 @@ metadata:
     flux.weave.works/tag.init: regex:^3.10.*
     flux.weave.works/tag.podinfod: semver:~2.1
 spec:
+  replicas: 2
   strategy:
     rollingUpdate:
       maxUnavailable: 0

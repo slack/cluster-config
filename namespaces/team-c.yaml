@@ -4,4 +4,6 @@ kind: Namespace
 metadata:
   labels:
     name: team-c
+  annotations:
+    contoso.com/owner: "team-c@contoso.com"
   name: team-c

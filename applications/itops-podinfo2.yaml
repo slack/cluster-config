@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo
+  name: podinfo2demo
   namespace: itops
   labels:
     app: podinfo
@@ -36,26 +36,26 @@ spec:
         image: stefanprodan/podinfo:2.1.0
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 9898
+        - containerPort: 9899
           name: http
           protocol: TCP
         command:
         - ./podinfo
-        - --port=9898
+        - --port=9899
         - --level=info
         - --random-delay=false
         - --random-error=false
         env:
         - name: PODINFO_UI_MESSAGE
-          value: "Greetings human!"
+          value: "Greetings demo audience!"
         livenessProbe:
           httpGet:
             path: /healthz
-            port: 9898
+            port: 9899
         readinessProbe:
           httpGet:
             path: /readyz
-            port: 9898
+            port: 9899
         resources:
           limits:
             cpu: 1000m

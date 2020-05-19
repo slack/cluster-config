@@ -113,7 +113,7 @@ spec:
   # an external load-balanced IP for the frontend service.
   # type: LoadBalancer
   ports:
-  - port: 9901
+  - port: 80
   selector:
     app: guestbook
     tier: frontend
@@ -151,4 +151,4 @@ spec:
           # line below:
           value: env
         ports:
-        - containerPort: 9901
+        - containerPort: 80
